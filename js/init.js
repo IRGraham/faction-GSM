@@ -9,14 +9,10 @@ var Init = React.createClass({
     displayName: 'Init',
 
     render: function() {
-        /* jshint ignore:start */
         return (
             <div>Hello World</div>
         );
-        /* jshint ignore:end */
     }
 });
 
-/* jshint ignore:start */
 React.render(<Init />, document.getElementById('content'));
-/* jshint ignore:end */

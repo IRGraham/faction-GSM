@@ -12,7 +12,9 @@ var jsFiles = ['./js/*.js'];
 
 gulp.task('lint', function() {
     return gulp.src(jsFiles)
-        .pipe(jshint())
+        .pipe(jshint({
+            linter: require('jshint-jsx').JSXHINT
+        }))
         .pipe(jshint.reporter('default'));
 });
 
