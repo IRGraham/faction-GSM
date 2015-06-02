@@ -11,7 +11,6 @@ module.exports = function(app, passport) {
     });
 
     app.post('/api/register', function(req, res, next) {
-        debugger;
         passport.authenticate('local-signup', function(err, user) {
             if(err) return next(err);
             if (!user) {

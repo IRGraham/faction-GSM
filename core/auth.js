@@ -15,8 +15,8 @@ module.exports = function(passport) {
 
     passport.deserializeUser(function(uid, done) {
         connection.query(queries.selectFrom('users', 'uid', uid),
-            function(err) {
-                done(err);
+            function(err, user) {
+                done(err, user);
             }
         );
     });
