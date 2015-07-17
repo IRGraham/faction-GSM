@@ -26,18 +26,20 @@ var ServerDBController = {
         });
      },
      getServerData:function(id){
-//         console.log(id);
-        connection.query('SELECT `serverData` FROM `servers` WHERE `sid` = '+id ,
+          var data;
+         connection.query('SELECT `serverData` FROM `servers` WHERE `sid` = '+id ,
                          function(err, result){
                             if(err){
                                 // console.log("error");
                                 return err;
                             }
-//                            result=result.exec(serverDataEx);
-                            console.log("result");
-                            console.log(result);
-                            return result;
+     //                     result=result.exec(serverDataEx);
+                          console.log(result);
+                            data= result;
+                            return;
                         });
+                        console.log(data);
+                        return data;
      },
 /*
      getServerData:function(req, res) {
