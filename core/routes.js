@@ -64,5 +64,5 @@ module.exports = function(app, passport) {
     });
 
     app.get('/api/servers', ServerDBController.getAll);
-    app.get('/api/find', MCController.find);
+    app.get('/api/find/:id', ServerDBController.getServerData);
 };

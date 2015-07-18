@@ -30,10 +30,6 @@ var actions = {
             return;
         }
         server[id].stop();
-    },
-    find: function(){
-        var Sdata = data.getServerData(1);
-        console.log("Sdata"+Sdata);
     }
 }
 module.exports = actions;
